@@ -1,0 +1,242 @@
+\documentclass[9pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[margin=0.3in]{geometry}
+
+\newcommand{\mysection}[1]{\section{\fcolorbox{white}{green}{#1}}}
+\newcommand{\mysubeqsec}[1]{\subsection{\fcolorbox{white}{cyan}{\ensuremath{\displaystyle #1}}}}
+\newcommand{\mysubsubeqsec}[1]{\subsubsection{\fcolorbox{white}{yellow}{\ensuremath{#1}}}}
+\newcommand{\mysubsection}[1]{\subsection{\fcolorbox{white}{cyan}{#1}}}
+
+\newcommand{\dx}{\ensuremath{\,\mathrm{d}x}}
+\newcommand{\du}{\ensuremath{\,\mathrm{d}u}}
+\newcommand{\dv}{\ensuremath{\,\mathrm{d}v}}
+\newcommand{\myto}{\colorbox{blue!20}{\ensuremath{\longmapsto}}}
+
+\hyphenation{
+	Sch-ran-ke
+	Kri-ter-i-um
+	Lei-b-ni-tz
+}
+
+\begin{document}
+
+\twocolumn
+
+\mysection{Funktionseigenschaften}
+
+\mysubsection{Surjektivität}
+
+TODO
+
+\mysubsection{Injektivität}
+
+TODO
+
+\mysubsection{Bijektivität}
+
+Eine Funktion ist bijektiv, wenn sie injektiv und surjektiv ist.
+
+\mysection{Funktion Invertieren}
+
+$y = f(x)$ nach $x$ auflösen, dann $y$ und $x$ vertauschen.
+
+\mysection{Folgenmonotonie}
+
+Sei $a_n$ eine Folge, dann ist $a_n$ streng monoton fallend, wenn
+$a_{n + 1} > a_n$ bzw. streng monoton steigend, wenn 
+$a_{n + 1} < a_n$ (bzw. \textit{nur} monoton steigend/fallend,
+wenn $\geq$ oder $\leq$).
+
+\mysection{Konvergenz}
+
+\mysubsection{Absolute Konvergenz}
+
+$\displaystyle \sum_{k = 0}^\infty a_k$ heißt \textit{absolut konvergent},
+wenn $\displaystyle \sum_{k = 0}^\infty |a_k|$ konvergiert. Ist eine Folge
+absolut konvergent, dann ist sie auch konvergent.
+
+\mysubsection{Majorantenkriterium}
+
+Sei $a_k$ eine Folge und $|a_k| \leq b_k$ und $\displaystyle \sum_{k=0}^\infty b_k$ 
+konvergent, dann ist auch $\displaystyle \sum_{k=0}^\infty a_k$ (absolut) konvergent.
+
+\mysubsection{Quotientenkriterium}
+
+TODO
+
+\mysubeqsec{\sum_{k = 0}^\infty \left(-1\right)^k a_n}
+
+\noindent Konvergent, wenn $a_n$ streng monoton fallend (Leibnitz-Kriterium).
+
+\mysubeqsec{\sum_{k = 0}^\infty \frac{g}{a^k}}
+
+\begin{equation*}
+	\sum_{k = 0}^\infty \frac{g}{a^k} = g\cdot \frac{a}{a-1} \text{ für } |a| > 1
+\end{equation*}
+
+\mysubeqsec{\sum_{k = 0}^\infty \frac{a^k}{b^k} = \sum_{k = 0}^\infty \left(\frac{a}{b}\right)^k}
+
+\noindent Für $\displaystyle |a| < |b|$: $\frac{b}{b-a} $
+
+\noindent Für $\displaystyle \left|\frac{a}{b}\right| < 1$:  $-\frac{b}{a-b}$
+
+\mysubeqsec{\sum_{n=0}^\infty \left(-1\right)^n\cdot z^k}
+
+\noindent Für $|z| < 1$: $\frac{1}{1+z}$
+
+\mysubeqsec{\sum_{n = 0}^\infty \frac{x^n}{n!} = e^x}
+
+\mysubeqsec{\sum_{n = 0}^\infty (-1)^n \frac{x^{n+1}}{n+1}}
+
+\noindent Für $x \in (-1, 1]$: $\ln(1 + x)$.
+
+\mysubeqsec{\sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!} = \sin(x)}
+
+\mysubeqsec{\sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!} = \cos(x)}
+
+\mysubeqsec{\sum_{n = 0}^\infty (-1)^n\frac{x^{n+1}}{n+1}}
+
+Für $x \in (-1, 1]$: $\ln(1+x)$
+
+\mysubeqsec{\sum_{n=0}^\infty x^n = \frac{1}{1-x} \text{ (Geometrische Reihe)}}
+
+\mysubeqsec{\sum_{n=0}^\infty\frac{1}{n} = \infty \text{ (Harmonische Reihe)}}
+
+\mysubeqsec{\sum_{n=}^\infty\frac{1}{n^a}}
+
+\noindent Fall $a = 2$: $\displaystyle \sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}$
+
+\mysubeqsec{\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n} = \ln(2) \text{ (Alt. harm. R.)}}
+
+\mysubeqsec{\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}\text{ (Basler Problem)}}
+
+\mysubeqsec{\sum_{n = 0}^\infty \frac{(-1)^n}{2n+1} = \frac{\pi}{4} \text{ (Leibnitzreihe)}}
+
+\mysection{Grenzwerte}
+
+\mysubsection{L'Hospital}
+
+Die Regel von L'Hospital besagt, dass, wenn man bei einem Grenzwert auf die Form $\lim \frac{g(x)}{h(x)} = \frac{0}{0}$ kommt, man
+den Grenzwert der beiden Ableitungen $\lim \frac{g'(x)}{h'(x)}$ bilden kann, der gleich dem Grenzwert der Ursprungsfunktion ist,
+wenn er existiert.
+
+\mysection{Tangenten}
+
+Allgemein Tangentengleichung: $\displaystyle y = mx + b$
+
+\begin{equation*}
+	m = \lim_{h \to 0} \frac{f(a+h) - f(a)}{(a+h)-a}
+\end{equation*}
+
+Allgemeine Form der Tangentengleichung an der Stelle $a$:
+
+\begin{equation*}
+	t(x) = f'(a)\cdot(x-a)+f(a)
+\end{equation*}
+
+Die Tangente ist äquivalent zur Taylorreihe ersten Grades der jeweiligen Funktion.
+
+\mysection{Schranken finden}
+
+Die kleinste obere Schranke heißt \textit{Surpremum}. Bei monoton fallenden Folgen ist das erste
+Folgenglied die obere Schranke. (Bei monoton steigenden ist das erste das kleinste und daher das 
+\textit{Infimum}). Wenn Monotonie weder (s)mf noch (s)ms, dann obere Schranke abschätzen und
+per Induktion beweisen (dann nicht notwendigerweise kleinste obere Schranke!).
+
+\mysection{Taylorreihe}
+
+\noindent Allgemeine Formel zur Bestimmung von Taylorreihenapproximationen an der Stelle $x_0$: 
+\begin{equation*}
+	f(x) \approx \sum_{k = 0}^n \frac{f^{(k)}(x_0)}{k!}\cdot \left(x-x_0\right)^k
+\end{equation*}
+
+\subsubsection{Approximationsfehler}
+
+\noindent Der Fehler einer Taylorapproximation an der Stelle $a$ kann abgeschätzt werden mit:
+
+\begin{equation*}
+	R_n(x) = \frac{M}{(n+1)!)}(x-a)^{n+1},
+\end{equation*}
+
+\noindent wobei $M$ eine obere Schranke von $|f^{(n+1)}(z)| \geq M$ sein muss.
+
+\mysection{Ableitungen}
+
+\mysubsection{Definition Ableitung}
+
+\begin{equation*}
+	f'(x) = \lim_{\epsilon \to 0} \frac{f(x + \epsilon) - f(x)}{\epsilon}
+\end{equation*}
+
+\mysubsection{Produktregel}
+
+\begin{equation*}
+	f(x) = g(x)\cdot h(x) \myto f'(x) = g'(x)\cdot h(x) + g(x)\cdot h'(x)
+\end{equation*}
+
+\mysubsection{Quotientenregel}
+
+\begin{equation*}
+	f(x) = \frac{g(x)}{h(x)} \myto f'(x) = \frac{h(x)\cdot g'(x)-g(x)\cdot h'(x)}{[h(x)]^2}
+\end{equation*}
+
+\mysubsection{Kettenregel}
+
+\begin{equation*}
+	f(x) = g(h(x)) \myto f'(x) = g'(h(x))\cdot h'(x)
+\end{equation*}
+
+\mysubsection{Spezielle Ableitungen}
+
+\mysubsubeqsec{f(x) = \ln(x) \myto f'(x) = \frac{1}{x}}
+
+\mysubsubeqsec{f(x) = \sqrt{x} \myto f'(x) = \frac{1}{2\sqrt{x}}}
+
+\mysubsubeqsec{\sin x \myto \cos x}
+
+\mysubsubeqsec{\cos x \myto -\sin x}
+
+\mysection{Integration}
+
+\mysubeqsec{\int x^n \dx = \frac{1}{n+1}x^{n+1} + C}
+
+\mysubeqsec{\int c\cdot f(x)\dx = c \cdot \int f(x) \dx}
+
+\mysubeqsec{\int\left(f(x) +g(x)\right) \dx = \int f(x)\dx + \int g(x)\dx}
+
+\mysubeqsec{\int f'(x)g(x)\dx = f(x)\cdot g(x) - \int f(x)\cdot g'(x)\dx}
+
+\mysubeqsec{\int \frac{f'(x)}{f(x)} \dx = \ln(f(x)) + C}
+
+\mysubeqsec{\int f'(x)\cdot g(x) \dx = f(x)\cdot g(x) - \int f(x)\cdot g'(x)\dx}
+
+Oder auch: $\displaystyle \int u \dv = uv - \int v\du$. Wähle $u$ so, dass es
+nach endlich vielen Ableitungen eine Konstante wird.
+
+\mysubeqsec{\int \frac{1}{u^2} \du = \frac{1}{u}}
+
+\mysubsection{Partialbruchzerlegung}
+
+\mysubeqsec{\frac{f(g)}{g(x)\cdot h(x)\cdot i(x) \cdot \cdots} = \frac{a}{g(x)} \cdot \frac{b}{h(x)} \cdot \frac{c}{i(x)} \cdot \cdots}
+
+$a, b, c, \cdots$ Herausfinden, indem man schaut, ob man durch geschicktes Einsetzen und Umstellen
+eine Gleichung der Form $c = a + n$ (mit $c, n$ fest, aber beliebig) herausbekommt. Beispiel:
+$g(x) = x - 5$, dann würde man $x = 5$ setzen und den \frq $g(x)$-Teil\flq\ wegkriegen. Damit
+$a, b, c, \cdots$ berechnen und dann einzelne Integrale bilden.
+
+\mysection{Beispielrechnungen}
+
+\mysubeqsec{\int \cos(ax)\dx}
+
+$$ u = ax, \du = a\dx, \frac{\du}{a} = \dx $$
+
+$$ \cos(ax)\dx = \int\cos(u)\frac{\du}{a} = \frac{1}{a} \int \cos(u)\du = \frac{1}{a} \sin(u) = \underline{\underline{\frac{1}{a} \sin(ax) + c}} $$
+
+
+\end{document}
