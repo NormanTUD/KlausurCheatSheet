@@ -230,6 +230,14 @@ eine Gleichung der Form $c = a + n$ (mit $c, n$ fest, aber beliebig) herausbekom
 $g(x) = x - 5$, dann würde man $x = 5$ setzen und den \frq $g(x)$-Teil\flq\ wegkriegen. Damit
 $a, b, c, \cdots$ berechnen und dann einzelne Integrale bilden.
 
+\mysection{Differentialgleichungen}
+
+\mysubsection{Matrix-Methode}
+
+\noindent Schritt 1: Differentialgleichungen als Koeffizientenmatrix aufschreiben\\
+\noindent Schritt 2: Eigenwerte herausfinden, Eigenvektoren $\displaystyle\vec{v_n}$ bilden\\
+\noindent Schritt 3: Lösung ist System aus Gleichungen $\displaystyle\vec{x} = \sum c_n \vec{v_n} e^x$ 
+
 \mysection{Beispielrechnungen}
 
 \mysubeqsec{\int \cos(ax)\dx}
@@ -237,6 +245,5 @@ $a, b, c, \cdots$ berechnen und dann einzelne Integrale bilden.
 $$ u = ax, \du = a\dx, \frac{\du}{a} = \dx $$
 
 $$ \cos(ax)\dx = \int\cos(u)\frac{\du}{a} = \frac{1}{a} \int \cos(u)\du = \frac{1}{a} \sin(u) = \underline{\underline{\frac{1}{a} \sin(ax) + c}} $$
-
 
 \end{document}

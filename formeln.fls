@@ -168,6 +168,7 @@ INPUT formeln.aux
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb

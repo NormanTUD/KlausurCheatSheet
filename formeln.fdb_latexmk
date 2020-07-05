@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1593290699 "formeln.tex" "formeln.pdf" "formeln" 1593423923
+["pdflatex"] 1593945858 "formeln.tex" "formeln.pdf" "formeln" 1593945860
   "/etc/texmf/web2c/texmf.cnf" 1580562987 732 f4a41a31fe6521d254799c5065efbda3 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -29,6 +29,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb" 1480098730 36507 bc28f9f0cdba50a8a348a6e4dc8a5378 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb" 1480098730 37756 112837e95d30cb64c320437ea63bd4d6 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb" 1480098739 34958 9a907601efb56a2c9429693f13b38b87 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb" 1480098739 14981 0a68017b66294a0c7d78935574145a1c ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb" 1480098739 13137 9cf0e1f3fa8b74ec708377d745022d53 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb" 1480098739 22192 22800790ceca09b5f3b0be051c1e852e ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futmii.vf" 1480098763 1332 62b87bc157157fd0616b8398929f8399 ""
@@ -85,8 +86,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1551493644 34566 ab5be96bde1a5acfd4f881dbe566b5fb ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1573221371 3236060 fd056e42459c13cbcb0cc6e0a7cae8d4 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1573221397 4225429 0a403567c50df01e63feb7a8a523e5d9 ""
-  "formeln.aux" 1593290700 11040 157594c11516d03d2faf8560aeadc371 ""
-  "formeln.tex" 1593290694 7335 e56f8abe5c8d10b74ebf5433b6bedafa ""
+  "formeln.aux" 1593945860 11319 3789e85be6730c8c2a86df5d3aef9f52 ""
+  "formeln.tex" 1593945856 7663 1cfeec5a1b7ef5d0d231642b27703144 ""
   (generated)
   "formeln.log"
   "formeln.aux"
