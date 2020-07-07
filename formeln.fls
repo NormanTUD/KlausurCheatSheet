@@ -191,6 +191,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/futmi.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/futmi.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-bb.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-bb.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futr8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futmii.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-mlit.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-ml.tfm
