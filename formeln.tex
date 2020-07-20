@@ -74,6 +74,9 @@ $\displaystyle \sum_{k = 0}^\infty a_k$ heißt \textit{absolut konvergent},
 wenn $\displaystyle \sum_{k = 0}^\infty |a_k|$ konvergiert. Ist eine Folge
 absolut konvergent, dann ist sie auch konvergent.
 
+Die Reihe $\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}$ ist konvergent, aber nicht
+absolut konvergent.
+
 \mysubsection{Majorantenkriterium}
 
 Sei $a_k$ eine Folge und $|a_k| \leq b_k$ und $\displaystyle \sum_{k=0}^\infty b_k$ 
@@ -300,6 +303,13 @@ $$ \det \begin{pmatrix} a & b & c \\
 \mysection{Wichtige Summen}
 
 \mysubeqsec{\sum_{k=0}^\infty \frac{a}{b^k} = \frac{ab}{b-1} \text{ (für }|b|>1\text{)}}
+
+\mysubeqsec{\sum_{k=0}^\infty \frac{a^{k+1}}{b^k} = \frac{ab}{b-a} \text{ (für }|a|<|b|\text{)}}
+
+\mysubeqsec{\sum_{n=0}^\infty \frac{a^{n-1}}{b^n} = \frac{b}{a(b-a)} \text{ (für }|a|<|b|\text{)}}
+
+\mysubeqsec{\sum_{n=0}^\infty \frac{a((-b)^n)}{c^n} = \frac{ca}{b+c} \text{ (für }|b|<|c|\text{)}}
+
 
 \end{document}
 
