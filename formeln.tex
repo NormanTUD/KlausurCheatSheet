@@ -1,4 +1,4 @@
-\documentclass[8pt]{scrartcl}
+\documentclass[landscape,8pt]{scrartcl}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -7,6 +7,9 @@
 \usepackage{amsmath}
 \usepackage{xcolor}
 \usepackage[margin=0.3in]{geometry}
+\usepackage{multicol}
+\setlength{\columnseprule}{0.4pt}
+
 
 \newcommand{\mysection}[1]{\section{\fcolorbox{white}{green}{#1}}}
 \newcommand{\mysubeqsec}[1]{\subsection{\fcolorbox{white}{cyan}{\ensuremath{#1}}}}
@@ -27,7 +30,9 @@
 
 \begin{document}
 
-\twocolumn
+\begin{multicols}{4}
+
+%\twocolumn
 
 
 \mysection{Funktionseigenschaften}
@@ -68,6 +73,10 @@ TODO
 Eine Folge $a_k$ kann nur konvergieren, wenn $\lim_{n\to\infty} a_n = 0$.
 
 \mysection{Konvergenz}
+
+\mysubsection{Konvergenzradius}
+
+\myeq{r = \lim \left|\frac{a_n}{a_{n+1}}\right|}
 
 \mysubsection{Absolute Konvergenz}
 
@@ -131,7 +140,8 @@ Allgemeine Form der Tangentengleichung an der Stelle $a$:
 	t(x) = f'(a)\cdot(x-a)+f(a)
 \end{equation*}
 
-Die Tangente ist äquivalent zur Taylorreihe ersten Grades der jeweiligen Funktion.
+Die Tangente ist äquivalent zur Taylorreihe ersten Grades der jeweiligen Funktion. $b$ bestimmt sich durch
+Gleichsetzung mit $f(x)$ an der Stelle $x$, wo die Tangente erstellt werden soll.
 
 \mysection{Schranken finden}
 
@@ -147,7 +157,7 @@ per Induktion beweisen (dann nicht notwendigerweise kleinste obere Schranke!).
 	f(x) \approx \sum_{k = 0}^n \frac{f^{(k)}(x_0)}{k!}\cdot \left(x-x_0\right)^k
 \end{equation*}
 
-\subsubsection{Approximationsfehler}
+\mysubsection{Approximationsfehler}
 
 \noindent Der Fehler einer Taylorapproximation an der Stelle $a$ kann abgeschätzt werden mit:
 
@@ -209,7 +219,9 @@ per Induktion beweisen (dann nicht notwendigerweise kleinste obere Schranke!).
 
 \myeq{\int \frac{1}{u^2} \du = \frac{1}{u}}
 
-\mysubeqsec{\int f'(x)\cdot g(x) \dx = f(x)\cdot g(x) - \int f(x)\cdot g'(x)\dx}
+\mysubsection{Partielle Integration}
+
+\myeq{\int f'(x)\cdot g(x) \dx = f(x)\cdot g(x) - \int f(x)\cdot g'(x)\dx}
 
 Oder auch: $\displaystyle \int u \dv = uv - \int v\du$. Wähle $u$ so, dass es
 nach endlich vielen Ableitungen eine Konstante wird.
@@ -240,13 +252,6 @@ TODO!!! Richtiges Beispiel rechnen!!!
 \noindent Schritt 2: Eigenwerte herausfinden, Eigenvektoren $\displaystyle\vec{v_n}$ bilden\\
 \noindent Schritt 3: Lösung ist System aus Gleichungen {\Large $\displaystyle\vec{x} = \sum c_n \vec{v_n} e^{\lambda_n x}$} 
 
-\mysection{Beispielrechnungen}
-
-\mysubeqsec{\int \cos(ax)\dx}
-
-$$ u = ax, \du = a\dx, \frac{\du}{a} = \dx $$
-
-$$ \cos(ax)\dx = \int\cos(u)\frac{\du}{a} = \frac{1}{a} \int \cos(u)\du = \frac{1}{a} \sin(u) = \underline{\underline{\frac{1}{a} \sin(ax) + c}} $$
 
 \mysubsection{Determinanten}
 
@@ -308,11 +313,23 @@ $$ \det \begin{pmatrix} a & b & c \\
 \]
 
 
-\mysubsection{Extrempunkte}
+\mysection{Extrempunkte}
 
 Bei einem EP ist $f'(x) = 0$. 
 
 Bei $f''(x) > 0$ ist es ein Tiefpunkt, bei $f''(x) < 0$ ein Hochpunkt.
+
+\mysection{Beispielrechnungen}
+
+\mysubeqsec{\int \cos(ax)\dx}
+
+$$ u = ax, \du = a\dx, \frac{\du}{a} = \dx $$
+
+$$ \cos(ax)\dx = \int\cos(u)\frac{\du}{a} = \frac{1}{a} \int \cos(u)\du $$
+$$  = \frac{1}{a} \sin(u) = \underline{\underline{\frac{1}{a} \sin(ax) + c}} $$
+
+
+\end{multicols}
 
 \end{document}
 
