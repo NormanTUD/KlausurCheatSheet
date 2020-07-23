@@ -10,12 +10,14 @@
 \usepackage{multicol}
 \setlength{\columnseprule}{0.4pt}
 
-
-\newcommand{\mysection}[1]{\section{\fcolorbox{white}{green}{#1}}}
+\newcommand\hr{\par\vspace{-.5\ht\strutbox}\noindent\hrulefill\par}
+\newcommand{\mysection}[1]{\hr\section{\fcolorbox{white}{green}{#1}}}
 \newcommand{\mysubeqsec}[1]{\subsection{\fcolorbox{white}{cyan}{\ensuremath{#1}}}}
 \newcommand{\mysubsubeqsec}[1]{\subsubsection{\fcolorbox{white}{yellow}{\ensuremath{#1}}}}
 \newcommand{\mysubsection}[1]{\subsection{\fcolorbox{white}{cyan}{#1}}}
 \newcommand{\myeq}[1]{\begin{equation*}#1\end{equation*}}
+\newcommand{\bmyeq}[1]{\begin{equation*}\boxed{#1}\end{equation*}}
+\newcommand{\mydoubleeq}[2]{\begin{align*}\boxed{#1} & \hfill & \boxed{#2}\end{align*}}
 
 \newcommand{\dx}{\ensuremath{\,\mathrm{d}x}}
 \newcommand{\du}{\ensuremath{\,\mathrm{d}u}}
@@ -35,7 +37,7 @@
 %\twocolumn
 
 
-\mysection{Funktionseigenschaften}
+\mysection{Funktionen}
 
 \mysubsection{Surjektivität}
 
@@ -51,7 +53,7 @@ $x_1 = x_2$. Dann ist die Funktion injektiv.
 
 Eine Funktion ist bijektiv, wenn sie injektiv und surjektiv ist.
 
-\mysection{Funktion Invertieren}
+\mysubsection{Funktion Invertieren}
 
 $y = f(x)$ nach $x$ auflösen, dann $y$ und $x$ vertauschen.
 
@@ -65,8 +67,6 @@ wenn $\geq$ oder $\leq$).
 \mysubsection{Monotoniekriterium}
 
 Jede monotone und beschränkte Folge konvergiert.
-
-TODO
 
 \mysubsection{Nullfolgenkriterium}
 
@@ -109,15 +109,11 @@ $a = \lim_{n\to\infty} \sqrt{a+2} \rightarrow a = \sqrt{a+2}$
 
 \mysubsection{Wichtige Grenzwerte}
 
-\myeq{\displaystyle \lim_{x \to \infty} \frac{ax+b}{cx+d} = \frac{a}{c}}
+\mydoubleeq{\displaystyle \lim_{x \to \infty} \frac{ax+b}{cx+d} = \frac{a}{c}}{\displaystyle \lim_{x \to \infty} \sqrt[x]{a+bx} = 1}
 
-\myeq{\displaystyle \lim_{x \to \infty} \sqrt[x]{x} = 1}
+\mydoubleeq{\displaystyle \lim_{x \to -\infty} \left(1+\frac{1}{x}\right)^x = e}{\displaystyle \lim_{x \to 0} \frac{\ln(x+1)}{x} = 1}
 
-\myeq{\displaystyle \lim_{x \to -\infty} \left(1+\frac{1}{x}\right)^x = e}
-
-\myeq{\displaystyle \lim_{x \to 0} \frac{\ln(x+1)}{x} = 1}
-
-\myeq{\displaystyle \lim_{n \to \infty} \left(1 + \frac{b}{cn}\right)^n = e^\frac{b}{c}}
+\myeq{\boxed{\displaystyle \lim_{n \to \infty} \left(1 + \frac{b}{cn}\right)^n = e^\frac{b}{c}}}
 
 
 \mysubsection{L'Hospital}
@@ -178,22 +174,24 @@ per Induktion beweisen (dann nicht notwendigerweise kleinste obere Schranke!).
 \mysubsection{Produktregel}
 
 \begin{equation*}
-	f(x) = g(x)\cdot h(x) \myto f'(x) = g'(x)\cdot h(x) + g(x)\cdot h'(x)
+	f(x) = g\cdot h \myto f'(x) = g'\cdot h + g\cdot h'
 \end{equation*}
 
 \mysubsection{Quotientenregel}
 
 \begin{equation*}
-	f(x) = \frac{g(x)}{h(x)} \myto f'(x) = \frac{h(x)\cdot g'(x)-h'(x)\cdot g(x)}{[h(x)]^2}
+	f = \frac{g}{h} \myto f' = \frac{h\cdot g'-h'\cdot g}{[h]^2}
 \end{equation*}
 
 \mysubsection{Kettenregel}
 
 \begin{equation*}
-	f(x) = g(h(x)) \myto f'(x) = g'(h(x))\cdot h'(x)
+	f = g(h) \myto f' = g'(h)\cdot h'
 \end{equation*}
 
 \mysubsection{Spezielle Ableitungen}
+
+\myeq{\frac{\partial}{\partial x}\left(\frac{a}{(b+cx)^k}\right) = -ack(b+cx)^{-k - 1}}
 
 \myeq{f(x) = ab^{x+c} \myto f'(x) = a\ln(b)\cdot b^{c+x}}
 
@@ -233,9 +231,13 @@ nach endlich vielen Ableitungen eine Konstante wird.
 \noindent Unecht gebrochene Funktion: $\frac{a^3}{c^2}$\\
 
 \noindent Falls unecht gebrochen:\\
-\noindent Schritt 0: Polynomdivision (falls unecht gebrochen)
+\noindent 1: Polynomdivision (falls unecht gebrochen)\\
+\noindent 2: ullstellen des Nenners berechnen\\
+\noindent 3: Jeder Nullstelle ihren Partialbruch zuordnen\\
+\noindent 4: Ansatz zur Partialbruchzerlegung aufstellen\\
+\noindent 5: Koeffizienten bestimmen
 
-\mysubeqsec{\frac{f(g)}{g(x)\cdot h(x)\cdot i(x) \cdot \cdots} = \frac{a}{g(x)} \cdot \frac{b}{h(x)} \cdot \frac{c}{i(x)} \cdot \cdots}
+\mysubsubeqsec{\frac{f(g)}{g(x)\cdot h(x)\cdot i(x) \cdot \cdots} = \frac{a}{g(x)} \cdot \frac{b}{h(x)} \cdot \frac{c}{i(x)} \cdot \cdots}
 
 $a, b, c, \cdots$ Herausfinden, indem man schaut, ob man durch geschicktes Einsetzen und Umstellen
 eine Gleichung der Form $c = a + n$ (mit $c, n$ fest, aber beliebig) herausbekommt. Beispiel:
@@ -255,30 +257,28 @@ TODO!!! Richtiges Beispiel rechnen!!!
 
 \mysubsection{Determinanten}
 
-$$ \det \begin{pmatrix} a & b & c \\
+$$ \boxed{\det \begin{pmatrix} a & b & c \\
 	d & e & f \\
 	g & h & i
-\end{pmatrix} = aei - afh - bdi + bfg + cdh - ceg $$
+\end{pmatrix} = aei - afh - bdi + bfg + cdh - ceg} $$
 
-\myeq{(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3}
+\bmyeq{(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3}
 
-\myeq{(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3}
+\bmyeq{(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3}
 
-\myeq{(a+b)(a-b)^2 = a^3 -a^2b -ab^2 + b^3}
+\bmyeq{(a+b)(a-b)^2 = a^3 -a^2b -ab^2 + b^3}
 
-\myeq{(a-b)(a+b)^2 = a^3 + a^2b - ab^2 - b^3}
+\bmyeq{(a-b)(a+b)^2 = a^3 + a^2b - ab^2 - b^3}
 
-\myeq{x_{1/2} = -\frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^2-q}}
+\bmyeq{x_{1/2} = -\frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^2-q}}
 
 \mysection{Wichtige Summen}
 
-\myeq{\sum_{n = 0}^\infty \frac{x^n}{n!} = e^x}
+\mydoubleeq{\sum_{n = 0}^\infty \frac{x^n}{n!} = e^x}{\sum_{k = 0}^\infty \frac{g}{a^k} = g\cdot \frac{a}{a-1} \text{ (für } |a| > 1\text{)}}
 
-\myeq{\sum_{k = 0}^\infty \frac{g}{a^k} = g\cdot \frac{a}{a-1} \text{ (für } |a| > 1\text{)}}
+\mydoubleeq{\sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!} = \sin(x)}{\sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!} = \cos(x)}
 
-\myeq{\sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!} = \sin(x)}
-
-\myeq{\sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!} = \cos(x)}
+\mydoubleeq{\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}\text{ (Basler Problem)}}{\sum_{n=}^\infty\frac{1}{n^2} = \frac{\pi^2}{6}}
 
 \myeq{\sum_{n=0}^\infty \left(-1\right)^n\cdot z^k = \frac{1}{1+z} \text{ (für }|z| < 1\text{)}}
 
@@ -292,8 +292,6 @@ $$ \det \begin{pmatrix} a & b & c \\
 
 \myeq{\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n} = \ln(2) \text{ (Alt. harm. R.)}}
 
-\myeq{\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}\text{ (Basler Problem)}}
-
 \myeq{\sum_{n = 0}^\infty \frac{(-1)^n}{2n+1} = \frac{\pi}{4} \text{ (Leibnitzreihe)}}
 
 \myeq{\sum_{n=0}^\infty x^n = \frac{1}{1-x} \text{ (Geometrische Reihe)}}
@@ -302,7 +300,6 @@ $$ \det \begin{pmatrix} a & b & c \\
 
 \myeq{\sum_{n = 0}^\infty (-1)^n \frac{x^{n+1}}{n+1} = \ln(1 + x) \text{(für }x \in (-1, 1]\text{)}}
 
-\myeq{\sum_{n=}^\infty\frac{1}{n^2} = \frac{\pi^2}{6}}
 
 \[
 \displaystyle
@@ -332,6 +329,3 @@ $$  = \frac{1}{a} \sin(u) = \underline{\underline{\frac{1}{a} \sin(ax) + c}} $$
 \end{multicols}
 
 \end{document}
-
-% TODO: 
-% Wichtige Grenzwerte
