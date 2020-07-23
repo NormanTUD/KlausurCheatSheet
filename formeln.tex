@@ -95,63 +95,20 @@ $a = \lim_{n\to\infty} \sqrt{a+2} \rightarrow a = \sqrt{a+2}$
 
 \noindent Konvergent, wenn $a_n$ streng monoton fallend (Leibnitz-Kriterium).
 
-\mysubeqsec{\sum_{k = 0}^\infty \frac{g}{a^k}}
-
-\begin{equation*}
-	\sum_{k = 0}^\infty \frac{g}{a^k} = g\cdot \frac{a}{a-1} \text{ für } |a| > 1
-\end{equation*}
-
-\mysubeqsec{\sum_{k = 0}^\infty \frac{a^k}{b^k} = \sum_{k = 0}^\infty \left(\frac{a}{b}\right)^k}
-
-\noindent Für $\displaystyle |a| < |b|$: $\frac{b}{b-a} $
-
-\noindent Für $\displaystyle \left|\frac{a}{b}\right| < 1$:  $-\frac{b}{a-b}$
-
-\mysubeqsec{\sum_{n=0}^\infty \left(-1\right)^n\cdot z^k}
-
-\noindent Für $|z| < 1$: $\frac{1}{1+z}$
-
-\mysubeqsec{\sum_{n = 0}^\infty \frac{x^n}{n!} = e^x}
-
-\mysubeqsec{\sum_{n = 0}^\infty (-1)^n \frac{x^{n+1}}{n+1}}
-
-\noindent Für $x \in (-1, 1]$: $\ln(1 + x)$.
-
-\mysubeqsec{\sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!} = \sin(x)}
-
-\mysubeqsec{\sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!} = \cos(x)}
-
-\mysubeqsec{\sum_{n = 0}^\infty (-1)^n\frac{x^{n+1}}{n+1}}
-
-Für $x \in (-1, 1]$: $\ln(1+x)$
-
-\mysubeqsec{\sum_{n=0}^\infty x^n = \frac{1}{1-x} \text{ (Geometrische Reihe)}}
-
-\mysubeqsec{\sum_{n=0}^\infty\frac{1}{n} = \infty \text{ (Harmonische Reihe)}}
-
-\mysubeqsec{\sum_{n=}^\infty\frac{1}{n^a}}
-
-\noindent Fall $a = 2$: $\displaystyle \sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}$
-
-\mysubeqsec{\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n} = \ln(2) \text{ (Alt. harm. R.)}}
-
-\mysubeqsec{\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}\text{ (Basler Problem)}}
-
-\mysubeqsec{\sum_{n = 0}^\infty \frac{(-1)^n}{2n+1} = \frac{\pi}{4} \text{ (Leibnitzreihe)}}
 
 \mysection{Grenzwerte}
 
 \mysubsection{Wichtige Grenzwerte}
 
-\mysubsubeqsec{\displaystyle \lim_{n \to \infty} \frac{ax+b}{cx+d} = \frac{a}{c}}
+\myeq{\displaystyle \lim_{n \to \infty} \frac{ax+b}{cx+d} = \frac{a}{c}}
 
-\mysubsubeqsec{\displaystyle \lim_{x \to \infty} \sqrt[x]{x} = 1}
+\myeq{\displaystyle \lim_{x \to \infty} \sqrt[x]{x} = 1}
 
-\mysubsubeqsec{\displaystyle \lim_{x \to -\infty} \left(1+\frac{1}{x}\right)^x = e}
+\myeq{\displaystyle \lim_{x \to -\infty} \left(1+\frac{1}{x}\right)^x = e}
 
-\mysubsubeqsec{\displaystyle \lim_{x \to 0} \frac{\ln(x+1)}{x} = 1}
+\myeq{\displaystyle \lim_{x \to 0} \frac{\ln(x+1)}{x} = 1}
 
-\mysubsubeqsec{\displaystyle \lim_{n \to \infty} \left(1 + \frac{b}{cn}\right)^n = e^\frac{b}{c}}
+\myeq{\displaystyle \lim_{n \to \infty} \left(1 + \frac{b}{cn}\right)^n = e^\frac{b}{c}}
 
 
 \mysubsection{L'Hospital}
@@ -217,7 +174,7 @@ per Induktion beweisen (dann nicht notwendigerweise kleinste obere Schranke!).
 \mysubsection{Quotientenregel}
 
 \begin{equation*}
-	f(x) = \frac{g(x)}{h(x)} \myto f'(x) = \frac{h(x)\cdot g'(x)-g(x)\cdot h'(x)}{[h(x)]^2}
+	f(x) = \frac{g(x)}{h(x)} \myto f'(x) = \frac{h(x)\cdot g'(x)-h'(x)\cdot g(x)}{[h(x)]^2}
 \end{equation*}
 
 \mysubsection{Kettenregel}
@@ -227,6 +184,8 @@ per Induktion beweisen (dann nicht notwendigerweise kleinste obere Schranke!).
 \end{equation*}
 
 \mysubsection{Spezielle Ableitungen}
+
+\myeq{f(x) = ab^{x+c} \myto f'(x) = a\ln(b)\cdot b^{c+x}}
 
 \myeq{f(x) = \ln(x) \myto f'(x) = \frac{1}{x}}
 
@@ -238,22 +197,23 @@ per Induktion beweisen (dann nicht notwendigerweise kleinste obere Schranke!).
 
 \mysection{Integration}
 
-\mysubeqsec{\int x^n \dx = \frac{1}{n+1}x^{n+1} + C}
+\myeq{\int x^n \dx = \frac{1}{n+1}x^{n+1} + C}
 
-\mysubeqsec{\int c\cdot f(x)\dx = c \cdot \int f(x) \dx}
+\myeq{\int c\cdot f(x)\dx = c \cdot \int f(x) \dx}
 
-\mysubeqsec{\int\left(f(x) +g(x)\right) \dx = \int f(x)\dx + \int g(x)\dx}
+\myeq{\int\left(f(x) +g(x)\right) \dx = \int f(x)\dx + \int g(x)\dx}
 
-\mysubeqsec{\int f'(x)g(x)\dx = f(x)\cdot g(x) - \int f(x)\cdot g'(x)\dx}
+\myeq{\int f'(x)g(x)\dx = f(x)\cdot g(x) - \int f(x)\cdot g'(x)\dx}
 
-\mysubeqsec{\int \frac{f'(x)}{f(x)} \dx = \ln(f(x)) + C}
+\myeq{\int \frac{f'(x)}{f(x)} \dx = \ln(f(x)) + C}
+
+\myeq{\int \frac{1}{u^2} \du = \frac{1}{u}}
 
 \mysubeqsec{\int f'(x)\cdot g(x) \dx = f(x)\cdot g(x) - \int f(x)\cdot g'(x)\dx}
 
 Oder auch: $\displaystyle \int u \dv = uv - \int v\du$. Wähle $u$ so, dass es
 nach endlich vielen Ableitungen eine Konstante wird.
 
-\mysubeqsec{\int \frac{1}{u^2} \du = \frac{1}{u}}
 
 \mysubsection{Partialbruchzerlegung}
 
@@ -295,25 +255,58 @@ $$ \det \begin{pmatrix} a & b & c \\
 	g & h & i
 \end{pmatrix} = aei - afh - bdi + bfg + cdh - ceg $$
 
-\mysubeqsec{(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3}
+\myeq{(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3}
 
-\mysubeqsec{(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3}
+\myeq{(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3}
 
-\mysubeqsec{(a+b)(a-b)^2 = a^3 -a^2b -ab^2 + b^3}
+\myeq{(a+b)(a-b)^2 = a^3 -a^2b -ab^2 + b^3}
 
-\mysubeqsec{(a-b)(a+b)^2 = a^3 + a^2b - ab^2 - b^3}
+\myeq{(a-b)(a+b)^2 = a^3 + a^2b - ab^2 - b^3}
 
-\mysubeqsec{x_{1/2} = -\frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^2-q}}
+\myeq{x_{1/2} = -\frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^2-q}}
 
 \mysection{Wichtige Summen}
 
-\mysubeqsec{\sum_{k=0}^\infty \frac{a}{b^k} = \frac{ab}{b-1} \text{ (für }|b|>1\text{)}}
+\myeq{\sum_{n = 0}^\infty \frac{x^n}{n!} = e^x}
 
-\mysubeqsec{\sum_{k=0}^\infty \frac{a^{k+1}}{b^k} = \frac{ab}{b-a} \text{ (für }|a|<|b|\text{)}}
+\myeq{\sum_{k = 0}^\infty \frac{g}{a^k} = g\cdot \frac{a}{a-1} \text{ (für } |a| > 1\text{)}}
 
-\mysubeqsec{\sum_{n=0}^\infty \frac{a^{n-1}}{b^n} = \frac{b}{a(b-a)} \text{ (für }|a|<|b|\text{)}}
+\myeq{\sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!} = \sin(x)}
 
-\mysubeqsec{\sum_{n=0}^\infty \frac{a((-b)^n)}{c^n} = \frac{ca}{b+c} \text{ (für }|b|<|c|\text{)}}
+\myeq{\sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!} = \cos(x)}
+
+\myeq{\sum_{n=0}^\infty \left(-1\right)^n\cdot z^k = \frac{1}{1+z} \text{ (für }|z| < 1\text{)}}
+
+\myeq{\sum_{k=0}^\infty \frac{a}{b^k} = \frac{ab}{b-1} \text{ (für }|b|>1\text{)}}
+
+\myeq{\sum_{k=0}^\infty \frac{a^{k+1}}{b^k} = \frac{ab}{b-a} \text{ (für }|a|<|b|\text{)}}
+
+\myeq{\sum_{n=0}^\infty \frac{a^{n-1}}{b^n} = \frac{b}{a(b-a)} \text{ (für }|a|<|b|\text{)}}
+
+\myeq{\sum_{n=0}^\infty \frac{a((-b)^n)}{c^n} = \frac{ca}{b+c} \text{ (für }|b|<|c|\text{)}}
+
+\myeq{\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n} = \ln(2) \text{ (Alt. harm. R.)}}
+
+\myeq{\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}\text{ (Basler Problem)}}
+
+\myeq{\sum_{n = 0}^\infty \frac{(-1)^n}{2n+1} = \frac{\pi}{4} \text{ (Leibnitzreihe)}}
+
+\myeq{\sum_{n=0}^\infty x^n = \frac{1}{1-x} \text{ (Geometrische Reihe)}}
+
+\myeq{\sum_{n=0}^\infty\frac{1}{n} = \infty \text{ (Harmonische Reihe)}}
+
+\myeq{\sum_{n = 0}^\infty (-1)^n \frac{x^{n+1}}{n+1} = \ln(1 + x) \text{(für }x \in (-1, 1]\text{)}}
+
+\myeq{\sum_{n=}^\infty\frac{1}{n^2} = \frac{\pi^2}{6}}
+
+\[
+\displaystyle
+\sum_{k = 0}^\infty \frac{a^k}{b^k} = \sum_{k = 0}^\infty \left(\frac{a}{b}\right)^k = \begin{cases} %
+	\frac{b}{b-a} & \text{Für }|a| < |b| \\ %
+	-\frac{b}{a-b} & \text{Für }\left|\frac{a}{b}\right| %
+\end{cases}
+\]
+
 
 \mysubsection{Extrempunkte}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.8)  23 JUL 2020 14:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.8)  23 JUL 2020 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -692,27 +692,27 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 260--262
+Underfull \hbox (badness 10000) in paragraph at lines 220--222
 
  []
 
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 281.
+(Font)              scaled to size 10.07397pt on input line 241.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 281.
+(Font)              scaled to size 7.63599pt on input line 241.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 281.
+(Font)              scaled to size 10.07397pt on input line 241.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 281.
+(Font)              scaled to size 7.63599pt on input line 241.
 [2] (./formeln.aux) ) 
 Here is how much of TeX's memory you used:
- 6072 strings out of 492615
- 94254 string characters out of 6131390
- 300868 words of memory out of 5000000
- 9868 multiletter control sequences out of 15000+600000
- 75170 words of font info for 110 fonts, out of 8000000 for 9000
+ 6069 strings out of 492615
+ 94216 string characters out of 6131390
+ 295868 words of memory out of 5000000
+ 9866 multiletter control sequences out of 15000+600000
+ 74395 words of font info for 109 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,7n,51p,9086b,163s stack positions out of 30000i,500n,10000p,200000b,80000s
+ 41i,9n,51p,9086b,173s stack positions out of 30000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc
 }{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive
 /texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/share/texlive/texm
@@ -723,7 +723,7 @@ e1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/uto
 pia/putri8a.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx0800.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfsx1000.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfsx1095.pfb>
-Output written on formeln.pdf (2 pages, 136145 bytes).
+Output written on formeln.pdf (2 pages, 131646 bytes).
 PDF statistics:
  49 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream
