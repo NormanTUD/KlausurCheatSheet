@@ -18,6 +18,7 @@
 \newcommand{\myeq}[1]{\begin{equation*}#1\end{equation*}}
 \newcommand{\bmyeq}[1]{\begin{equation*}\boxed{#1}\end{equation*}}
 \newcommand{\mydoubleeq}[2]{\begin{align*}\boxed{#1} & \hfill & \boxed{#2}\end{align*}}
+\newcommand{\mydoubleeqarrow}[2]{\begin{align*}\boxed{#1} & \hfill & {\Large \rightarrow} & \hfill & \boxed{#2}\end{align*}}
 \newcommand{\partialvar}[2]{\frac{\partial}{\partial #1}\left(#2\right)}
 
 \newcommand{\dx}{\ensuremath{\,\mathrm{d}x}}
@@ -339,6 +340,18 @@ $$  = \frac{1}{a} \sin(u) = \underline{\underline{\frac{1}{a} \sin(ax) + c}} $$
 \bmyeq{\sin(0) = 0}
 
 \bmyeq{\sin\left(\frac{\pi}{2}\right) =1}
+
+\mysubsection{Induktion Folge}
+
+$a_{n+1}$ ist beschränkt durch 0 und 1. Zu zeigen: $$ 0 < 1 - a_{n+1} < 1 $$
+
+\mydoubleeq{a_{n+1} = 1-\sqrt{1-a_n}}{a_0 = \frac{3}{4}}
+
+\myeq{\text{IA: } 0 < a_n < 1}
+
+\mydoubleeqarrow{\text{IS: } 0 < a_n < 1}{| \cdot (-1) | \cdot +1 | \sqrt{\phantom{\square}} | \cdot (-1) | + 1}
+
+\mydoubleeqarrow{0 < 1 - \sqrt{1-a_n} < 1}{0 < 1 - a_{n+1} < 1 \blacksquare}
 
 
 \end{multicols}
