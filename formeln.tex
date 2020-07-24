@@ -8,18 +8,19 @@
 \usepackage{xcolor}
 \usepackage[margin=0.3in]{geometry}
 \usepackage{multicol}
+\usepackage{verbatim}
 \setlength{\columnseprule}{0.4pt}
 
 \newcommand\hr{\par\vspace{-.5\ht\strutbox}\noindent\hrulefill\par}
-\newcommand{\mysection}[1]{\hr\section{\fcolorbox{white}{green}{#1}}}
+\newcommand{\mysection}[1]{\hr\vspace{-0.15cm}\section{\fcolorbox{white}{green}{#1}}}
 \newcommand{\mysubeqsec}[1]{\subsection{\fcolorbox{white}{cyan}{\ensuremath{#1}}}}
 \newcommand{\mysubsubeqsec}[1]{\subsubsection{\fcolorbox{white}{yellow}{\ensuremath{#1}}}}
 \newcommand{\mysubsection}[1]{\subsection{\fcolorbox{white}{cyan}{#1}}}
 \newcommand{\myeq}[1]{\begin{equation*}#1\end{equation*}}
 \newcommand{\bmyeq}[1]{\begin{equation*}\boxed{#1}\end{equation*}}
 \newcommand{\mydoubleeq}[2]{\begin{align*}\boxed{#1} & \hfill & \boxed{#2}\end{align*}}
-\newcommand{\mydoubleeqarrow}[2]{\begin{align*}\boxed{#1} & \hfill & {\Large \rightarrow} & \hfill & \boxed{#2}\end{align*}}
 \newcommand{\partialvar}[2]{\frac{\partial}{\partial #1}\left(#2\right)}
+\newcommand{\mydoubleeqarrow}[2]{\begin{align*}\boxed{#1} & \hfill & {\Large \myto} & \hfill & \boxed{#2}\end{align*}}
 
 \newcommand{\dx}{\ensuremath{\,\mathrm{d}x}}
 \newcommand{\du}{\ensuremath{\,\mathrm{d}u}}
@@ -100,7 +101,7 @@ TODO
 
 \mysubsection{Limes von Reihe}
 
-$a = \lim_{n\to\infty} \sqrt{a+2} \rightarrow a = \sqrt{a+2}$
+$a = \lim_{n\to\infty} \sqrt{a+2} \myto a = \sqrt{a+2}$
 
 \mysubeqsec{\sum_{k = 0}^\infty \left(-1\right)^k a_n}
 
@@ -230,7 +231,7 @@ per Induktion beweisen (dann nicht notwendigerweise kleinste obere Schranke!).
 Oder auch: $\displaystyle \int u \dv = uv - \int v\du$. Wähle $u$ so, dass es
 nach endlich vielen Ableitungen eine Konstante wird.
 
-
+\begin{comment}
 \mysubsection{Partialbruchzerlegung}
 
 \noindent Echt gebrochene Funktion: $\frac{a^2}{c^3}$\\
@@ -251,6 +252,7 @@ $g(x) = x - 5$, dann würde man $x = 5$ setzen und den \frq $g(x)$-Teil\flq\ weg
 $a, b, c, \cdots$ berechnen und dann einzelne Integrale bilden.
 
 TODO!!! Richtiges Beispiel rechnen!!!
+\end{comment}
 
 \mysection{Differentialgleichungen}
 
@@ -280,7 +282,7 @@ $$ \boxed{\det \begin{pmatrix} a & b & c \\
 
 \mysection{Wichtige Summen}
 
-\mydoubleeq{\sum_{n = 0}^\infty \frac{x^n}{n!} = e^x}{\sum_{k = 0}^\infty \frac{g}{a^k} = g\cdot \frac{a}{a-1} \text{ (für } |a| > 1\text{)}}
+\mydoubleeq{\sum_{n = 0}^\infty \frac{x^n}{n!} = e^x}{\sum_{n = 0}^\infty \frac{g}{a^n} = g\cdot \frac{a}{a-1} \text{ (für } |a| > 1\text{)}}
 
 \mydoubleeq{\sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!} = \sin(x)}{\sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!} = \cos(x)}
 
@@ -288,9 +290,9 @@ $$ \boxed{\det \begin{pmatrix} a & b & c \\
 
 \bmyeq{\sum_{n=0}^\infty \left(-1\right)^n\cdot z^n = \frac{1}{1+z} \text{ (für }|z| < 1\text{)}}
 
-\bmyeq{\sum_{k=0}^\infty \frac{a}{b^k} = \frac{ab}{b-1} \text{ (für }|b|>1\text{)}}
+\bmyeq{\sum_{n=0}^\infty \frac{a}{b^n} = \frac{ab}{b-1} \text{ (für }|b|>1\text{)}}
 
-\bmyeq{\sum_{k=0}^\infty \frac{a^{k+1}}{b^k} = \frac{ab}{b-a} \text{ (für }|a|<|b|\text{)}}
+\bmyeq{\sum_{n=0}^\infty \frac{a^{n+1}}{b^n} = \frac{ab}{b-a} \text{ (für }|a|<|b|\text{)}}
 
 \bmyeq{\sum_{n=0}^\infty \frac{a^{n-1}}{b^n} = \frac{b}{a(b-a)} \text{ (für }|a|<|b|\text{)}}
 
@@ -310,7 +312,7 @@ $$ \boxed{\det \begin{pmatrix} a & b & c \\
 \[
 \boxed{
 	\displaystyle
-	\sum_{k = 0}^\infty \frac{a^k}{b^k} = \sum_{k = 0}^\infty \left(\frac{a}{b}\right)^k = \begin{cases} %
+	\sum_{n = 0}^\infty \frac{a^n}{b^n} = \sum_{n = 0}^\infty \left(\frac{a}{b}\right)^n = \begin{cases} %
 		\frac{b}{b-a} & \text{Für }|a| < |b| \\ %
 		-\frac{b}{a-b} & \text{Für }\left|\frac{a}{b}\right| < 1%
 	\end{cases}
@@ -328,6 +330,13 @@ Bei einem EP ist $f'(x) = 0$.
 
 Bei $f''(x) > 0$ ist es ein Tiefpunkt, bei $f''(x) < 0$ ein Hochpunkt.
 
+\mysection{Wichtige Werte}
+
+\mydoubleeq{\sin(0) = 0}{\cos(0) = 1}
+
+\mydoubleeq{\sin\left(\frac{\pi}{2}\right) = 1}{\cos\left(\frac{\pi}{2}\right) = 0}
+\mydoubleeq{\sin\left(\frac{-\pi}{2}\right) = -1}{\cos\left(-\pi\right) = -1}
+
 \mysection{Beispielrechnungen}
 
 \mysubeqsec{\int \cos(ax)\dx}
@@ -337,17 +346,17 @@ $$ u = ax, \du = a\dx, \frac{\du}{a} = \dx $$
 $$ \cos(ax)\dx = \int\cos(u)\frac{\du}{a} = \frac{1}{a} \int \cos(u)\du $$
 $$  = \frac{1}{a} \sin(u) = \underline{\underline{\frac{1}{a} \sin(ax) + c}} $$
 
-\bmyeq{\sin(0) = 0}
-
-\bmyeq{\sin\left(\frac{\pi}{2}\right) =1}
 
 \mysubsection{Induktion Folge}
 
-$a_{n+1}$ ist beschränkt durch 0 und 1. Zu zeigen: $$ 0 < 1 - a_{n+1} < 1 $$
-
 \mydoubleeq{a_{n+1} = 1-\sqrt{1-a_n}}{a_0 = \frac{3}{4}}
 
-\myeq{\text{IA: } 0 < a_n < 1}
+$a_{n+1}$ ist beschränkt durch 0 und 1. 
+
+\noindent Zu zeigen: $ 0 < 1 - \sqrt{a_{n+1}} < 1 $
+
+
+\bmyeq{\text{IA: } 0 < a_n < 1}
 
 \mydoubleeqarrow{\text{IS: } 0 < a_n < 1}{| \cdot (-1) | \cdot +1 | \sqrt{\phantom{\square}} | \cdot (-1) | + 1}
 
