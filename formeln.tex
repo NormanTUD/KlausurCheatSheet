@@ -210,17 +210,17 @@ per Induktion beweisen (dann nicht notwendigerweise kleinste obere Schranke!).
 
 \mysection{Integration}
 
-\myeq{\int x^n \dx = \frac{1}{n+1}x^{n+1} + C}
+\bmyeq{\int x^n \dx = \frac{1}{n+1}x^{n+1} + C}
 
-\myeq{\int c\cdot f(x)\dx = c \cdot \int f(x) \dx}
+\bmyeq{\int c\cdot f(x)\dx = c \cdot \int f(x) \dx}
 
-\myeq{\int\left(f(x) +g(x)\right) \dx = \int f(x)\dx + \int g(x)\dx}
+\bmyeq{\int\left(f(x) +g(x)\right) \dx = \int f(x)\dx + \int g(x)\dx}
 
-\myeq{\int f'(x)g(x)\dx = f(x)\cdot g(x) - \int f(x)\cdot g'(x)\dx}
+\bmyeq{\int f'(x)g(x)\dx = f(x)\cdot g(x) - \int f(x)\cdot g'(x)\dx}
 
-\myeq{\int \frac{f'(x)}{f(x)} \dx = \ln(f(x)) + C}
+\bmyeq{\int \frac{f'(x)}{f(x)} \dx = \ln(f(x)) + C}
 
-\myeq{\int \frac{1}{u^2} \du = \frac{1}{u}}
+\bmyeq{\int \frac{1}{u^2} \du = \frac{1}{u}}
 
 \mysubsection{Partielle Integration}
 
@@ -285,33 +285,35 @@ $$ \boxed{\det \begin{pmatrix} a & b & c \\
 
 \mydoubleeq{\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}\text{ (Basler Problem)}}{\sum_{n=}^\infty\frac{1}{n^2} = \frac{\pi^2}{6}}
 
-\myeq{\sum_{n=0}^\infty \left(-1\right)^n\cdot z^n = \frac{1}{1+z} \text{ (für }|z| < 1\text{)}}
+\bmyeq{\sum_{n=0}^\infty \left(-1\right)^n\cdot z^n = \frac{1}{1+z} \text{ (für }|z| < 1\text{)}}
 
-\myeq{\sum_{k=0}^\infty \frac{a}{b^k} = \frac{ab}{b-1} \text{ (für }|b|>1\text{)}}
+\bmyeq{\sum_{k=0}^\infty \frac{a}{b^k} = \frac{ab}{b-1} \text{ (für }|b|>1\text{)}}
 
-\myeq{\sum_{k=0}^\infty \frac{a^{k+1}}{b^k} = \frac{ab}{b-a} \text{ (für }|a|<|b|\text{)}}
+\bmyeq{\sum_{k=0}^\infty \frac{a^{k+1}}{b^k} = \frac{ab}{b-a} \text{ (für }|a|<|b|\text{)}}
 
-\myeq{\sum_{n=0}^\infty \frac{a^{n-1}}{b^n} = \frac{b}{a(b-a)} \text{ (für }|a|<|b|\text{)}}
+\bmyeq{\sum_{n=0}^\infty \frac{a^{n-1}}{b^n} = \frac{b}{a(b-a)} \text{ (für }|a|<|b|\text{)}}
 
-\myeq{\sum_{n=0}^\infty \frac{a((-b)^n)}{c^n} = \frac{ca}{b+c} \text{ (für }|b|<|c|\text{)}}
+\bmyeq{\sum_{n=0}^\infty \frac{a((-b)^n)}{c^n} = \frac{ca}{b+c} \text{ (für }|b|<|c|\text{)}}
 
-\myeq{\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n} = \ln(2) \text{ (Alt. harm. R.)}}
+\bmyeq{\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n} = \ln(2) \text{ (Alt. harm. R.)}}
 
-\myeq{\sum_{n = 0}^\infty \frac{(-1)^n}{2n+1} = \frac{\pi}{4} \text{ (Leibnitzreihe)}}
+\bmyeq{\sum_{n = 0}^\infty \frac{(-1)^n}{2n+1} = \frac{\pi}{4} \text{ (Leibnitzreihe)}}
 
-\myeq{\sum_{n=0}^\infty x^n = \frac{1}{1-x} \text{ (Geometrische Reihe)}}
+\bmyeq{\sum_{n=0}^\infty x^n = \frac{1}{1-x} \text{ (Geometrische Reihe)}}
 
-\myeq{\sum_{n=0}^\infty\frac{1}{n} = \infty \text{ (Harmonische Reihe)}}
+\bmyeq{\sum_{n=0}^\infty\frac{1}{n} = \infty \text{ (Harmonische Reihe)}}
 
-\myeq{\sum_{n = 0}^\infty (-1)^n \frac{x^{n+1}}{n+1} = \ln(1 + x) \text{(für }x \in (-1, 1]\text{)}}
+\bmyeq{\sum_{n = 0}^\infty (-1)^n \frac{x^{n+1}}{n+1} = \ln(1 + x) \text{(für }x \in (-1, 1]\text{)}}
 
 
 \[
-\displaystyle
-\sum_{k = 0}^\infty \frac{a^k}{b^k} = \sum_{k = 0}^\infty \left(\frac{a}{b}\right)^k = \begin{cases} %
-	\frac{b}{b-a} & \text{Für }|a| < |b| \\ %
-	-\frac{b}{a-b} & \text{Für }\left|\frac{a}{b}\right| < 1%
-\end{cases}
+\boxed{
+	\displaystyle
+	\sum_{k = 0}^\infty \frac{a^k}{b^k} = \sum_{k = 0}^\infty \left(\frac{a}{b}\right)^k = \begin{cases} %
+		\frac{b}{b-a} & \text{Für }|a| < |b| \\ %
+		-\frac{b}{a-b} & \text{Für }\left|\frac{a}{b}\right| < 1%
+	\end{cases}
+}
 \]
 
 
@@ -334,7 +336,9 @@ $$ u = ax, \du = a\dx, \frac{\du}{a} = \dx $$
 $$ \cos(ax)\dx = \int\cos(u)\frac{\du}{a} = \frac{1}{a} \int \cos(u)\du $$
 $$  = \frac{1}{a} \sin(u) = \underline{\underline{\frac{1}{a} \sin(ax) + c}} $$
 
-$$ \sin(0) = 0 $$
+\bmyeq{\sin(0) = 0}
+
+\bmyeq{\sin\left(\frac{\pi}{2}\right) =1}
 
 
 \end{multicols}
