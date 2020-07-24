@@ -18,6 +18,7 @@
 \newcommand{\myeq}[1]{\begin{equation*}#1\end{equation*}}
 \newcommand{\bmyeq}[1]{\begin{equation*}\boxed{#1}\end{equation*}}
 \newcommand{\mydoubleeq}[2]{\begin{align*}\boxed{#1} & \hfill & \boxed{#2}\end{align*}}
+\newcommand{\partialvar}[2]{\frac{\partial}{\partial #1}\left(#2\right)}
 
 \newcommand{\dx}{\ensuremath{\,\mathrm{d}x}}
 \newcommand{\du}{\ensuremath{\,\mathrm{d}u}}
@@ -189,17 +190,23 @@ per Induktion beweisen (dann nicht notwendigerweise kleinste obere Schranke!).
 
 \mysubsection{Spezielle Ableitungen}
 
-\myeq{\frac{\partial}{\partial x}\left(\frac{a}{(b+cx)^k}\right) = -ack(b+cx)^{-k - 1}}
+\bmyeq{\partialvar{x}{\frac{a}{(b+cx)^k}} = -ack(b+cx)^{-k - 1}}
 
-\myeq{f(x) = ab^{x+c} \myto f'(x) = a\ln(b)\cdot b^{c+x}}
+\bmyeq{\partialvar{x}{\ln\left(a+bx^n\right)} = \frac{bnx^{n-1}}{a+bx^n}}
 
-\myeq{f(x) = \ln(x) \myto f'(x) = \frac{1}{x}}
+\bmyeq{\partialvar{x}{ab^{x+c}} = a\ln(b)\cdot b^{c+x}}
 
-\myeq{f(x) = \sqrt{x} \myto f'(x) = \frac{1}{2\sqrt{x}}}
+\bmyeq{f(x) = \ln(x) \myto f'(x) = \frac{1}{x}}
 
-\myeq{\sin x \myto \cos x}
+\bmyeq{f(x) = \sqrt{x} \myto f'(x) = \frac{1}{2\sqrt{x}}}
 
-\myeq{\cos x \myto -\sin x}
+\bmyeq{\partialvar{x}{(\sqrt{ax^n+b}} = \frac{anx^{n-1}}{2\sqrt{ax^n+b}}}
+
+\mydoubleeq{\sin x \myto \cos x}{\cos x \myto -\sin x}
+
+\bmyeq{\partialvar{x}{a\sin\left(b+cx^d\right)} = acdx^{d-1}\cos\left(b+cx^d\right)}
+
+\bmyeq{\partialvar{x}{a\cos\left(b+cx^d\right)} = -acdx^{d-1}\sin\left(b+cx^d\right)}
 
 \mysection{Integration}
 
@@ -322,6 +329,8 @@ $$ u = ax, \du = a\dx, \frac{\du}{a} = \dx $$
 
 $$ \cos(ax)\dx = \int\cos(u)\frac{\du}{a} = \frac{1}{a} \int \cos(u)\du $$
 $$  = \frac{1}{a} \sin(u) = \underline{\underline{\frac{1}{a} \sin(ax) + c}} $$
+
+$$ \sin(0) = 0 $$
 
 
 \end{multicols}
